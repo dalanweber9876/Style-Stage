@@ -21,13 +21,17 @@ nav ul {
    flex-wrap: wrap;
 }
 
-#main .container {
+#main #about .container:first-of-type {
    display: grid;
 }
 
-#about .container {
+#about .container:first-of-type {
    grid-template-columns: 1fr 1fr;
    column-gap: 5%;
+}
+
+#guidelines {
+   display: block;
 }
 
 #about p:nth-of-type(1) {
