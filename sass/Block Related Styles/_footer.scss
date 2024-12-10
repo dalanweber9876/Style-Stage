@@ -1,3 +1,8 @@
+footer {
+   background-color: darkgray;
+   margin-top: 2rem;
+}
+
 #styles ul{
    width: 40%;
    margin: auto;
@@ -17,4 +22,19 @@ a {
 
 a:hover {
    color: rgb(72, 72, 72);
+}
+
+footer li {
+   list-style-type: circle;
+}
+
+footer ul::before {
+   display: block;
+   content: '';
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-image: url('ghost.png');
+   width: 200px;
+   height: 200px;
 }

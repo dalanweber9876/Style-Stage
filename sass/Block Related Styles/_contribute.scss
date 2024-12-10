@@ -1,4 +1,12 @@
 #contribute {
    width: 85%;
-   margin: auto;
+   margin: auto auto 2rem;
+}
+
+#contribute li {
+   list-style-type: decimal;
+}
+
+#contribute h2 {
+   margin-top: 1.5rem;
 }
