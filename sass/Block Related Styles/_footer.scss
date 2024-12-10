@@ -1,5 +1,5 @@
 footer {
-   background-color: darkgray;
+   background-color: var(--color-background);
    margin-top: 2rem;
 }
 
@@ -17,7 +17,7 @@ footer {
 
 a {
    color: black;
-   text-decoration: underline;
+   text-decoration:dotted;
 }
 
 a:hover {
@@ -28,6 +28,12 @@ footer li {
    list-style-type: circle;
 }
 
+footer ul {
+   margin: 2rem auto;
+   border-right: 2px solid black;
+   padding-right: 2.5rem;
+}
+
 footer ul::before {
    display: block;
    content: '';
@@ -35,6 +41,11 @@ footer ul::before {
    background-position: center;
    background-repeat: no-repeat;
    background-image: url('ghost.png');
-   width: 200px;
-   height: 200px;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+}
+
+footer#files {
+   background-color: var(--color-secondary);
 }

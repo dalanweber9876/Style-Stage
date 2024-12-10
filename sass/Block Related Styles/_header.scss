@@ -8,9 +8,30 @@ h1 {
    margin-top: 15px;
 }
 
-header p {
-   width: 50%;
+h1::after {
+   background-image: url('boo-ghost.png');
+   display: flex;
+   content: '';
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100px;
+   height: 100px;
+   right: 12%;
+   top: 22%;
+   align-items: center;
+   position: absolute;
+}
+
+header h2 {
    margin: auto;
+   width: 75%;
+   text-align: center;
+}
+
+header p {
+   width: 40%;
+   margin: 1rem auto;
    text-align: center;
 }
 
@@ -18,9 +39,13 @@ header .link-github {
    border: 2px solid black;
    padding: 6px;
    display: flex;
-   margin: 1rem auto;
+   margin: 0.5rem auto;
    border-radius: 10px;
    width: 138px;
+}
+
+header div.container {
+   margin-bottom: 0.5rem;
 }
 
 svg {
@@ -32,4 +57,11 @@ svg {
 
 a {
    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+   h1::after {
+      top: 25%;
+      right: 4%;
+   }
 }
