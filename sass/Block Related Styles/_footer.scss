@@ -4,20 +4,24 @@ footer {
 }
 
 #styles ul{
-   width: 40%;
+   width: 50%;
+   min-width: 280px;
+   max-width: 380px;
    margin: auto;
    padding-left: 0;
+   // padding: 0.5rem;
 }
 
 #styles li {
    background-color: var(--color-background);
    padding: 2rem;
    color: white;
+   margin: 10px 0;
 }
 
 a {
    color: black;
-   text-decoration:dotted;
+   text-decoration: underline;
 }
 
 a:hover {

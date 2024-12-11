@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
-@import url("https://https://www.fontspace.com/dangernight-font-f86845");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nosifer&display=swap");
 :root {
   --color-primary: #512888;
   --color-primary-alt: #da4200;
@@ -76,6 +75,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --header-font: "Nosifer";
+  --body-font: "Fredoka";
+}
+
 header div.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -158,13 +162,24 @@ footer ul {
   padding: 10px;
 }
 
+h1::before {
+  background-image: url(spider.png);
+  content: "";
+  background-size: cover;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 20px;
+}
+
 h1 {
   text-align: center;
   margin-top: 15px;
 }
 
 h1::after {
-  background-image: url("boo-ghost.png");
+  background-image: url(boo-ghost.png);
   display: flex;
   content: "";
   background-size: cover;
@@ -211,7 +226,7 @@ svg {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: overline;
 }
 
 @media (max-width: 600px) {
@@ -247,7 +262,6 @@ nav ul {
 }
 
 #about .container:first-of-type p:first-of-type {
-  margin: 0.5rem 0;
   margin-left: auto;
 }
 
@@ -266,25 +280,48 @@ nav ul {
 }
 
 #about .container:nth-of-type(2) ul {
-  display: block;
-  background-image: url(gravestone.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1/1;
+  position: relative;
+  /* Establishes a stacking context for the pseudo-element */
   width: 90%;
   max-width: 500px;
   min-width: 330px;
   min-height: 330px;
   margin: auto;
   padding-top: 35px;
+  z-index: 1;
+  /* Ensure the text appears above the pseudo-element */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about .container:nth-of-type(2) ul::before {
+  content: "";
+  position: absolute;
+  /* Position it relative to the ul */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center it within the ul */
+  width: 90vw;
+  /* Match the width of the ul */
+  min-width: 320px;
+  max-width: 550px;
+  height: 100%;
+  /* Match the height of the ul */
+  background-image: url(jack-o-lantern.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  /* Low opacity for the background image */
+  z-index: -1;
+  /* Place the pseudo-element behind the ul's content */
 }
 
 #about .container:nth-of-type(2) li {
-  transform: translate(30%);
-  margin: 0;
+  margin: 0 1rem;
   box-sizing: border-box;
-  font-size: 85%;
+  z-index: 2;
 }
 
 #about .container:nth-of-type(2) p:nth-of-type(3),
@@ -319,15 +356,25 @@ body {
   background-color: var(--color-secondary);
 }
 
+p, li {
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--header-font);
+}
+
 aside {
-  margin: auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
 .profile ul {
   padding: 0.5rem 0;
-  margin: auto;
-  width: 40%;
+  margin: 1rem auto;
+  width: 50%;
+  min-width: 280px;
+  max-width: 380px;
   text-align: center;
   background-color: var(--color-background);
 }
@@ -338,7 +385,9 @@ footer {
 }
 
 #styles ul {
-  width: 40%;
+  width: 50%;
+  min-width: 280px;
+  max-width: 380px;
   margin: auto;
   padding-left: 0;
 }
@@ -347,11 +396,12 @@ footer {
   background-color: var(--color-background);
   padding: 2rem;
   color: white;
+  margin: 10px 0;
 }
 
 a {
   color: black;
-  text-decoration: dotted;
+  text-decoration: underline;
 }
 
 a:hover {

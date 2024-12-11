@@ -14,7 +14,7 @@
 }
 
 #about .container:first-of-type p:first-of-type {
-   margin: 0.5rem 0; 
+   // margin: 0.5rem 0; 
    margin-left: auto; 
 }
 
@@ -32,30 +32,64 @@
    margin-top: 1.5rem;
 }
 
+// #about .container:nth-of-type(2) ul {
+//    display: block;
+//    background-image: url(grave.png);
+//    opacity: 0.1;
+//    background-size: cover;
+//    background-position: center;
+//    background-repeat: no-repeat;
+//    aspect-ratio: 1/1;
+//    // width: 330px;
+//    width: 90%;
+//    max-width: 500px;
+//    min-width: 330px;
+//    min-height: 330px;
+//    margin: auto;
+//    padding-top: 35px;
+// }
+
 #about .container:nth-of-type(2) ul {
-   display: block;
-   background-image: url(gravestone.png);
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   aspect-ratio: 1/1;
-   // width: 330px;
+   position: relative; /* Establishes a stacking context for the pseudo-element */
    width: 90%;
    max-width: 500px;
    min-width: 330px;
    min-height: 330px;
    margin: auto;
    padding-top: 35px;
+   z-index: 1; /* Ensure the text appears above the pseudo-element */
+   display: flex;
+   flex-wrap: wrap;
 }
+
+#about .container:nth-of-type(2) ul::before {
+   content: '';
+   position: absolute; /* Position it relative to the ul */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); /* Center it within the ul */
+   width: 90vw; /* Match the width of the ul */
+   min-width: 320px;
+   max-width: 550px;
+   height: 100%; /* Match the height of the ul */
+   background-image: url(jack-o-lantern.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   opacity: 0.1; /* Low opacity for the background image */
+   z-index: -1; /* Place the pseudo-element behind the ul's content */
+}
+
 
 #about .container:nth-of-type(2) li {
    // text-align: center;
-   transform: translate(30%);
-   margin: 0;
+   // transform: translate(30%);
+   margin: 0 1rem;
    box-sizing: border-box;
-   font-size: 85%;;
+   // font-size: 85%;
+   z-index: 2;
+   // list-style-type: circle;
 }
-
 #about .container:nth-of-type(2) p:nth-of-type(3), 
 #about .container:nth-of-type(2) p:nth-of-type(4) {
    margin: 1.25rem auto;

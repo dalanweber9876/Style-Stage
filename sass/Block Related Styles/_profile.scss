@@ -1,5 +1,5 @@
 aside {
-   margin: auto;
+   margin: 1rem auto;
    text-align: center;
    // justify-content: center;
 }
@@ -7,8 +7,10 @@ aside {
 .profile ul {
    // justify-content: center;
    padding: 0.5rem 0;
-   margin: auto;
-   width: 40%;
+   margin: 1rem auto;
+   width: 50%;
+   min-width: 280px;
+   max-width: 380px;
    text-align: center;
    background-color: var(--color-background);
 }

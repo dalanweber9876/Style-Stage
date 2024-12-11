@@ -1,3 +1,11 @@
 body {
    background-color: var(--color-secondary);
 }
+
+p, li {
+   font-family: var(--body-font);
+}
+
+h1, h2, h3, h4 {
+   font-family: var(--header-font);
+}
