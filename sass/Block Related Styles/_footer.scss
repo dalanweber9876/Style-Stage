@@ -9,7 +9,6 @@ footer {
    max-width: 380px;
    margin: auto;
    padding-left: 0;
-   // padding: 0.5rem;
 }
 
 #styles li {
@@ -51,5 +50,5 @@ footer ul::before {
 }
 
 footer#files {
-   background-color: var(--color-secondary);
+   background-color: var(--background-color);
 }

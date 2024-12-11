@@ -212,6 +212,7 @@ header .link-github {
   margin: 0.5rem auto;
   border-radius: 10px;
   width: 138px;
+  background-color: var(--color-background);
 }
 
 header div.container {
@@ -272,7 +273,7 @@ nav ul {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   padding: 8px 0;
-  background-color: var(--color-secondary);
+  background-color: var(--background-color);
 }
 
 #about .container:nth-of-type(2) h2 {
@@ -281,7 +282,6 @@ nav ul {
 
 #about .container:nth-of-type(2) ul {
   position: relative;
-  /* Establishes a stacking context for the pseudo-element */
   width: 90%;
   max-width: 500px;
   min-width: 330px;
@@ -289,7 +289,6 @@ nav ul {
   margin: auto;
   padding-top: 35px;
   z-index: 1;
-  /* Ensure the text appears above the pseudo-element */
   display: flex;
   flex-wrap: wrap;
 }
@@ -297,25 +296,19 @@ nav ul {
 #about .container:nth-of-type(2) ul::before {
   content: "";
   position: absolute;
-  /* Position it relative to the ul */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center it within the ul */
   width: 90vw;
-  /* Match the width of the ul */
   min-width: 320px;
   max-width: 550px;
   height: 100%;
-  /* Match the height of the ul */
   background-image: url(jack-o-lantern.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.1;
-  /* Low opacity for the background image */
   z-index: -1;
-  /* Place the pseudo-element behind the ul's content */
 }
 
 #about .container:nth-of-type(2) li {
@@ -431,5 +424,5 @@ footer ul::before {
 }
 
 footer#files {
-  background-color: var(--color-secondary);
+  background-color: var(--background-color);
 }
