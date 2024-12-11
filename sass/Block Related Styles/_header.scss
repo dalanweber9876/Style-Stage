@@ -28,8 +28,8 @@ h1::after {
    background-repeat: no-repeat;
    width: 100px;
    height: 100px;
-   right: 12%;
-   top: 22%;
+   right: 3%;
+   top: 36%;
    align-items: center;
    position: absolute;
 }
@@ -53,8 +53,13 @@ header .link-github {
    margin: 0.5rem auto;
    border-radius: 10px;
    width: 138px;
+   color: white;
    background-color: var(--color-background);
 }
+
+.link-github svg path {
+   fill: white;
+ }
 
 header div.container {
    margin-bottom: 0.5rem;
@@ -71,9 +76,9 @@ a {
    text-decoration: overline;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 526px) {
    h1::after {
       top: 25%;
-      right: 4%;
+      right: 6%;
    }
 }

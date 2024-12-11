@@ -1,4 +1,16 @@
 #files .container {
-   width: 80%;
+   width: 85%;
+   display: block;
    margin: auto;
+   color: black;
+   text-align: center;
+}
+
+#files h3 {
+   margin-bottom: 12px;
+}
+
+#files a {
+   color: black;
+   margin: 10px;
 }
