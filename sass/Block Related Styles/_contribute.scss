@@ -10,3 +10,14 @@
 #contribute h2 {
    margin-top: 1.5rem;
 }
+
+@media (min-width: 900px) {
+   .container {
+      margin: 2rem auto;
+      width: 70%;
+   }
+
+   #about .container p {
+      margin: 1.5rem auto;
+   }
+}

@@ -79,13 +79,17 @@
 }
 
 @media (min-width: 900px) {
-   #about .container {
-      margin: 2rem auto;
-      width: 70%;
-   }
+   // #about .container {
+   //    margin: 2.5rem auto 2rem;
+   //    width: 70%;
+   // }
 
    #about .container p {
       margin: 1.5rem auto;
+   }
+
+   #about h2 {
+      margin-top: 10rem;
    }
 }
 
