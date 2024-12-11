@@ -73,3 +73,19 @@
    margin: 1.25rem auto;
 }
 
+:root {
+   --background-color: #39bc5e;
+   --color-background: #5a388a;
+}
+
+@media (min-width: 900px) {
+   #about .container {
+      margin: 2rem auto;
+      width: 70%;
+   }
+
+   #about .container p {
+      margin: 1.5rem auto;
+   }
+}
+

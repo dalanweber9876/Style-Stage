@@ -30,6 +30,34 @@ nav ul {
    column-gap: 5%;
 }
 
+@media (min-width: 900px) {
+   #main #about .container:first-of-type {
+      display: block;
+   }
+
+   footer.page-footer ul {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      padding: 0;
+   }
+
+   footer ul::before {
+      grid-column: 1/2;
+      grid-row: 1/5;
+      margin: auto;
+      padding-right: 5rem;
+   }
+
+   footer ul li {
+      grid-column: 2/3;
+      margin-right: 2rem;
+   }
+
+   footer div.container {
+      grid-template-columns: 1fr 1.5fr;
+   }
+}
+
 #guidelines {
    display: block;
 }

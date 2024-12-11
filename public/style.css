@@ -112,6 +112,33 @@ nav ul {
   column-gap: 5%;
 }
 
+@media (min-width: 900px) {
+  #main #about .container:first-of-type {
+    display: block;
+  }
+
+  footer.page-footer ul {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    padding: 0;
+  }
+
+  footer ul::before {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    margin: auto;
+    padding-right: 5rem;
+  }
+
+  footer ul li {
+    grid-column: 2/3;
+    margin-right: 2rem;
+  }
+
+  footer div.container {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
 #guidelines {
   display: block;
 }
@@ -160,6 +187,8 @@ footer ul {
 .skip-link {
   border: 2px solid black;
   padding: 10px;
+  background-color: var(--color-background);
+  color: white;
 }
 
 h1::before {
@@ -199,6 +228,18 @@ header h2 {
   text-align: center;
 }
 
+@media (min-width: 900px) {
+  header h2 {
+    width: 50%;
+  }
+
+  h1::after {
+    height: 150px;
+    width: 150px;
+    top: 16%;
+    right: 15%;
+  }
+}
 header p {
   width: 40%;
   margin: 1rem auto;
@@ -235,7 +276,7 @@ a {
   text-decoration: overline;
 }
 
-@media (min-width: 526px) {
+@media (min-width: 526px) and (max-width: 900px) {
   h1::after {
     top: 25%;
     right: 6%;
@@ -250,6 +291,16 @@ nav ul {
   width: 90%;
   margin: auto;
   padding: 0;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #035703;
+  padding: 1rem 0;
 }
 
 #about {
@@ -327,6 +378,21 @@ nav ul {
   margin: 1.25rem auto;
 }
 
+:root {
+  --background-color: #39bc5e;
+  --color-background: #5a388a;
+}
+
+@media (min-width: 900px) {
+  #about .container {
+    margin: 2rem auto;
+    width: 70%;
+  }
+
+  #about .container p {
+    margin: 1.5rem auto;
+  }
+}
 #guidelines {
   width: 85%;
   margin: auto;
@@ -373,6 +439,11 @@ li {
 
 h1, h2, h3, h4 {
   font-family: var(--header-font);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 aside {
@@ -430,7 +501,7 @@ a {
 }
 
 a:hover {
-  color: #484848;
+  color: #c1c1c1;
 }
 
 footer li {
@@ -457,4 +528,10 @@ footer ul::before {
 
 footer#files {
   background-color: var(--background-color);
+}
+
+@media (min-width: 900px) {
+  footer ul::before {
+    left: 2%;
+  }
 }

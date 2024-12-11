@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-   color: rgb(72, 72, 72);
+   color: rgb(193, 193, 193);
 }
 
 footer li {
@@ -56,4 +56,10 @@ footer ul::before {
 
 footer#files {
    background-color: var(--background-color);
+}
+
+@media (min-width: 900px) {
+   footer ul::before {
+      left: 2%;
+   }
 }
