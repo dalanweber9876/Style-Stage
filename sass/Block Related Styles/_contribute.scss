@@ -20,4 +20,16 @@
    #about .container p {
       margin: 1.5rem auto;
    }
+
+   p, a, span, #contribute li {
+      font-size: 1.25rem;
+   }
+
+   a.link-github {
+      font-size: 1rem;
+   }
+
+   h2, h3, h4 {
+      margin-top: 2rem;
+   }
 }

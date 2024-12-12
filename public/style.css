@@ -80,6 +80,11 @@ select {
   --body-font: "Fredoka";
 }
 
+:root {
+  --header-font: "Nosifer";
+  --body-font: "Fredoka";
+}
+
 header div.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -236,8 +241,14 @@ header h2 {
   h1::after {
     height: 150px;
     width: 150px;
-    top: 16%;
-    right: 15%;
+    top: 21%;
+    right: 14%;
+  }
+}
+@media (min-width: 526px) and (max-width: 900px) {
+  h1::after {
+    top: 25%;
+    right: 6%;
   }
 }
 header p {
@@ -276,12 +287,6 @@ a {
   text-decoration: overline;
 }
 
-@media (min-width: 526px) and (max-width: 900px) {
-  h1::after {
-    top: 25%;
-    right: 6%;
-  }
-}
 li {
   list-style-type: none;
   margin: 10px;
@@ -418,6 +423,18 @@ nav {
 
   #about .container p {
     margin: 1.5rem auto;
+  }
+
+  p, a, span, #contribute li {
+    font-size: 1.25rem;
+  }
+
+  a.link-github {
+    font-size: 1rem;
+  }
+
+  h2, h3, h4 {
+    margin-top: 2rem;
   }
 }
 #files .container {
