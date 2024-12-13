@@ -2,8 +2,8 @@
 	width: 85%;
 	margin: auto;
 	p {
-		hyphens: auto;
 		margin: auto;
+		hyphens: auto;
 	}
 	.container {
 		&:first-of-type {
@@ -69,7 +69,6 @@
 				z-index: 2;
 				border: 2px solid black;
 				padding: 0.25rem;
-				// font-weight: bold;
 			}
 			p {
 				&:nth-of-type(3) {
@@ -90,6 +89,25 @@
 		.container {
 			p {
 				margin: 1.5rem auto;
+			}
+			&:first-of-type {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				p {
+					&:first-of-type {
+						padding-right: 1rem;
+					}
+					&:nth-of-type(2) {
+						border-left: 2px solid black;
+						padding-left: 1rem;
+					}
+					&:last-of-type {
+						grid-column: 1/3;
+					}
+				}
+				blockquote {
+					grid-column: 1/3;
+				}
 			}
 		}
 		h2 {
