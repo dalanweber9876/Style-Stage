@@ -228,6 +228,12 @@ nav ul a {
   color: white;
   text-decoration: none;
 }
+nav ul li a {
+  transition: font-size 0.2s ease;
+}
+nav ul li a:hover {
+  font-size: 22px;
+}
 
 #about {
   width: 85%;

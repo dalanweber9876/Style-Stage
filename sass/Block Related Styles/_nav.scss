@@ -12,5 +12,13 @@ nav {
 			color: $secondary-font-color;
 			text-decoration: none;
 		}
+		li {
+			a {
+				transition: font-size 0.2s ease;
+				&:hover {
+					font-size: 22px;
+				}
+			}
+		}
 	}
 }
