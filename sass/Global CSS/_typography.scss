@@ -1,0 +1,39 @@
+a {
+	color: $font-color;
+	text-decoration: underline;
+	&:hover {
+		color: $hover-font-color;
+	}
+}
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+@media (min-width: 900px) {
+	h2 {
+		margin-top: 2rem;
+	}
+	h3 {
+		margin-top: 2rem;
+	}
+	h4 {
+		margin-top: 2rem;
+	}
+	a.link-github {
+		font-size: 1rem;
+	}
+	p {
+		font-size: $large-font-size;
+	}
+	a {
+		font-size: $large-font-size;
+	}
+	span {
+		font-size: $large-font-size;
+	}
+	#contribute {
+		li {
+			font-size: $large-font-size;
+		}
+	}
+}

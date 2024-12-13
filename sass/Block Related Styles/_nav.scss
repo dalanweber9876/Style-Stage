@@ -1,20 +1,16 @@
-li {
-   list-style-type: none;
-   margin: 10px;
-}
-
-nav ul {
-   width: 90%;
-   margin: auto;
-   padding: 0;
-}
-
-nav ul a {
-   color: white;
-   text-decoration: none;
-}
-
 nav {
-   background-color: rgb(3, 87, 3);
-   padding: 1rem 0;
+	background-color: $accent-color-2;
+	padding: 1rem 0;
+	ul {
+		width: 90%;
+		margin: auto;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		a {
+			color: $secondary-font-color;
+			text-decoration: none;
+		}
+	}
 }

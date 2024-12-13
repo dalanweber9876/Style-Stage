@@ -1,27 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nosifer&display=swap");
-:root {
-  --color-primary: #512888;
-  --color-primary-alt: #da4200;
-  --color-secondary: #39bc5e;
-  --color-background: #7349ac;
-  --color-text: #3b2d4e;
-  --color-light: #fff;
-  --color-anchor: #512888;
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
-  --border-radius: 8px;
-}
-
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
 /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nosifer&display=swap");
 *,
 *::before,
 *::after {
@@ -75,124 +57,90 @@ select {
     scroll-behavior: auto !important;
   }
 }
-:root {
-  --header-font: "Nosifer";
-  --body-font: "Fredoka";
+a {
+  color: black;
+  text-decoration: underline;
+}
+a:hover {
+  color: #dfdfdf;
 }
 
-header div.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  h2 {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+
+  h4 {
+    margin-top: 2rem;
+  }
+
+  a.link-github {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+
+  #contribute li {
+    font-size: 1.25rem;
+  }
+}
+p, li {
+  font-family: "Fredoka";
+}
+
+h1, h2, h3, h4 {
+  font-family: "Nosifer";
+}
+
+body {
+  background-color: #39bc5e;
 }
 
 h1, h2 {
   grid-column: 1/3;
 }
 
-header p, header a {
-  grid-column: 1/3;
+li {
+  list-style-type: none;
+  margin: 10px;
 }
 
-header .link-github {
-  grid-column: 1/3;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#main #about .container:first-of-type {
-  display: grid;
-}
-
-#about .container:first-of-type {
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5%;
+aside {
+  margin: 1rem auto;
+  text-align: center;
 }
 
 @media (min-width: 900px) {
-  #main #about .container:first-of-type {
-    display: block;
-  }
-
-  footer.page-footer ul {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    padding: 0;
-  }
-
-  footer ul::before {
-    grid-column: 1/2;
-    grid-row: 1/5;
-    margin: auto;
-    padding-right: 5rem;
-  }
-
-  footer ul li {
-    grid-column: 2/3;
-    margin-right: 2rem;
-  }
-
-  footer div.container {
-    grid-template-columns: 1fr 1.5fr;
+  .container {
+    margin: 2rem auto;
+    width: 70%;
   }
 }
-#guidelines {
-  display: block;
+h1 {
+  text-align: center;
+  margin-top: 15px;
 }
-
-#about p:nth-of-type(1) {
-  grid-column: 1/2;
-}
-
-#about p:nth-of-type(2) {
-  grid-column: 2/3;
-}
-
-blockquote, #about p:nth-of-type(3) {
-  grid-column: 1/3;
-}
-
-footer .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  row-gap: 20px;
-}
-
-footer p {
-  grid-column: 2/3;
-  width: 80%;
-  margin: auto;
-}
-
-footer p:first-of-type {
-  grid-row: 2/3;
-}
-
-footer p:nth-of-type(2) {
-  grid-row: 3/4;
-}
-
-footer p:nth-of-type(3) {
-  grid-row: 4/5;
-}
-
-footer ul {
-  grid-column: 1/2;
-  grid-row: 1/6;
-}
-
-.skip-link {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: var(--color-background);
-  color: white;
-}
-
 h1::before {
-  background-image: url(spider.png);
+  background-image: url("images/spider.png");
   content: "";
   background-size: cover;
   position: fixed;
@@ -201,14 +149,8 @@ h1::before {
   top: 0;
   right: 20px;
 }
-
-h1 {
-  text-align: center;
-  margin-top: 15px;
-}
-
 h1::after {
-  background-image: url(boo-ghost.png);
+  background-image: url("images/boo-ghost.png");
   display: flex;
   content: "";
   background-size: cover;
@@ -217,17 +159,47 @@ h1::after {
   width: 100px;
   height: 100px;
   right: 3%;
-  top: 36%;
+  top: 32%;
   align-items: center;
   position: absolute;
 }
 
+header .link-github {
+  grid-column: 1/3;
+  border: 2px solid black;
+  padding: 6px;
+  display: flex;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  width: 138px;
+  color: white;
+  background-color: #5a388a;
+}
+header p {
+  grid-column: 1/3;
+  width: 40%;
+  margin: 1rem auto;
+  text-align: center;
+}
+header a {
+  grid-column: 1/3;
+}
 header h2 {
   margin: auto;
   width: 75%;
   text-align: center;
 }
+header div.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0.5rem;
+}
 
+@media (max-width: 500px) {
+  h1::after {
+    display: none;
+  }
+}
 @media (min-width: 900px) {
   header h2 {
     width: 50%;
@@ -240,154 +212,100 @@ header h2 {
     right: 14%;
   }
 }
-@media (min-width: 526px) and (max-width: 900px) {
-  h1::after {
-    top: 25%;
-    right: 6%;
-  }
+nav {
+  background-color: #035703;
+  padding: 1rem 0;
 }
-header p {
-  width: 40%;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-header .link-github {
-  border: 2px solid black;
-  padding: 6px;
-  display: flex;
-  margin: 0.5rem auto;
-  border-radius: 10px;
-  width: 138px;
-  color: white;
-  background-color: var(--color-background);
-}
-
-.link-github svg path {
-  fill: white;
-}
-
-header div.container {
-  margin-bottom: 0.5rem;
-}
-
-svg {
-  height: 20px;
-  margin: auto;
-  margin-top: 2px;
-  padding-right: 4px;
-}
-
-a {
-  text-decoration: overline;
-}
-
-li {
-  list-style-type: none;
-  margin: 10px;
-}
-
 nav ul {
   width: 90%;
   margin: auto;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 nav ul a {
   color: white;
   text-decoration: none;
-}
-
-nav {
-  background-color: #035703;
-  padding: 1rem 0;
 }
 
 #about {
   width: 85%;
   margin: auto;
 }
-
 #about p {
   hyphens: auto;
   margin: auto;
 }
-
 #about .container:first-of-type h2 {
   margin: 1.5rem auto 1rem;
   text-align: center;
 }
-
 #about .container:first-of-type p:first-of-type {
   margin-left: auto;
 }
-
 #about .container:first-of-type blockquote p:first-of-type {
   margin: auto;
-  background-color: white;
   width: 100%;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   padding: 8px 0;
-  background-color: var(--background-color);
+  background-color: #39bc5e;
 }
-
 #about .container:nth-of-type(2) h2 {
   margin-top: 1.5rem;
 }
-
 #about .container:nth-of-type(2) ul {
   position: relative;
-  width: 90%;
   max-width: 500px;
   min-width: 330px;
   min-height: 330px;
   margin: auto;
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-left: 0;
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
 #about .container:nth-of-type(2) ul::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  min-width: 320px;
+  width: 100vw;
+  min-width: 400px;
   max-width: 550px;
   height: 100%;
-  background-image: url(jack-o-lantern.png);
+  background-image: url("images/jack-o-lantern.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -1;
 }
-
 #about .container:nth-of-type(2) li {
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
   box-sizing: border-box;
   z-index: 2;
+  border: 2px solid black;
+  padding: 0.25rem;
 }
-
-#about .container:nth-of-type(2) p:nth-of-type(3),
+#about .container:nth-of-type(2) p:nth-of-type(3) {
+  margin: 1.25rem auto;
+}
 #about .container:nth-of-type(2) p:nth-of-type(4) {
   margin: 1.25rem auto;
 }
-
-:root {
-  --background-color: #39bc5e;
-  --color-background: #5a388a;
+#about .container p {
+  margin: 1.5rem auto 0;
 }
 
 @media (min-width: 900px) {
   #about .container p {
     margin: 1.5rem auto;
   }
-
   #about h2 {
     margin-top: 10rem;
   }
@@ -401,35 +319,16 @@ nav {
   width: 85%;
   margin: auto auto 2rem;
 }
-
 #contribute li {
   list-style-type: decimal;
 }
-
 #contribute h2 {
   margin-top: 1.5rem;
 }
 
 @media (min-width: 900px) {
-  .container {
-    margin: 2rem auto;
-    width: 70%;
-  }
-
-  #about .container p {
-    margin: 1.5rem auto;
-  }
-
-  p, a, span, #contribute li {
+  #contribute li {
     font-size: 1.25rem;
-  }
-
-  a.link-github {
-    font-size: 1rem;
-  }
-
-  h2, h3, h4 {
-    margin-top: 2rem;
   }
 }
 #files .container {
@@ -439,39 +338,55 @@ nav {
   color: black;
   text-align: center;
 }
-
 #files h3 {
   margin-bottom: 12px;
 }
-
 #files a {
   color: black;
   margin: 10px;
 }
 
-body {
-  background-color: var(--color-secondary);
+#styles ul {
+  width: 50%;
+  min-width: 280px;
+  max-width: 380px;
+  margin: auto;
+  padding-left: 0;
+}
+#styles ul li {
+  border: 2px solid black;
+  background-color: #035703;
+  padding: 2rem;
+  color: white;
+  margin: 10px 0;
+}
+#styles ul a {
+  color: white;
 }
 
-#styles p,
-li {
-  font-family: var(--body-font);
+@media (min-width: 900px) {
+  #styles ul {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+  #styles ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    text-wrap: wrap;
+    height: 125px;
+    margin: 20px 0;
+  }
+  #styles ul.features {
+    width: 100%;
+    min-width: 280px;
+    max-width: none;
+    justify-content: center;
+  }
 }
-
-h1, h2, h3, h4 {
-  font-family: var(--header-font);
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-aside {
-  margin: 1rem auto;
-  text-align: center;
-}
-
 .profile ul {
   padding: 0.5rem 0;
   margin: 1rem auto;
@@ -479,14 +394,10 @@ aside {
   min-width: 280px;
   max-width: 380px;
   text-align: center;
-  background-color: var(--color-background);
+  background-color: #5a388a;
   color: white;
+  border: 2px solid black;
 }
-
-#styles ul a {
-  color: white;
-}
-
 .profile ul a {
   color: white;
 }
@@ -498,29 +409,85 @@ aside {
     max-width: 450px;
     width: 100%;
   }
+}
+footer {
+  background-color: #5a388a;
+  margin-top: 2rem;
+  color: white;
+  border-top: 2px solid black;
+}
+footer a {
+  color: white;
+}
+footer li {
+  list-style-type: circle;
+}
+footer ul {
+  margin: 2rem auto;
+  border-right: 2px solid white;
+  padding-right: 0.5rem;
+  grid-column: 1/2;
+  grid-row: 1/6;
+}
+footer ul::before {
+  display: block;
+  content: "";
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("images/ghost.png");
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 20px;
+}
+footer p {
+  grid-column: 2/3;
+  width: 80%;
+  margin: auto;
+}
+footer p:first-of-type {
+  grid-row: 2/3;
+}
+footer p:nth-of-type(2) {
+  grid-row: 3/4;
+}
+footer p:nth-of-type(3) {
+  grid-row: 4/5;
+}
 
-  #styles ul {
-    display: flex;
+footer#files {
+  background-color: #39bc5e;
+  border-top: none;
+}
+
+@media (min-width: 900px) {
+  footer ul::before {
+    left: 2%;
+    grid-column: 1/2;
+    grid-row: 1/5;
     margin: auto;
-    flex-wrap: wrap;
-    column-gap: 30px;
+    padding-right: 5rem;
+  }
+  footer ul li {
+    grid-column: 2/3;
+    margin-right: 2rem;
+  }
+  footer a.link-github {
+    font-size: 1.25rem;
+  }
+  footer div.container {
+    grid-template-columns: 1fr 1.5fr;
   }
 
-  #styles ul.features {
-    width: 100%;
-    min-width: 280px;
-    max-width: none;
-    justify-content: center;
-  }
-
-  #styles ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    text-wrap: wrap;
-    height: 125px;
-    margin: 20px 0;
+  footer.page-footer ul {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    padding: 0;
   }
 
   div.container:last-of-type {
@@ -528,68 +495,20 @@ aside {
     width: 100%;
   }
 }
-footer {
-  background-color: var(--color-background);
-  margin-top: 2rem;
+.skip-link {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #5a388a;
   color: white;
 }
 
-#styles ul {
-  width: 50%;
-  min-width: 280px;
-  max-width: 380px;
+.link-github svg path {
+  fill: white;
+}
+
+svg {
+  height: 20px;
   margin: auto;
-  padding-left: 0;
-}
-
-#styles li {
-  background-color: var(--color-background);
-  padding: 2rem;
-  color: white;
-  margin: 10px 0;
-}
-
-footer a {
-  color: white;
-}
-
-a {
-  color: black;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #c1c1c1;
-}
-
-footer li {
-  list-style-type: circle;
-}
-
-footer ul {
-  margin: 2rem auto;
-  border-right: 2px solid white;
-  padding-right: 2.5rem;
-}
-
-footer ul::before {
-  display: block;
-  content: "";
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("ghost.png");
-  width: 150px;
-  height: 150px;
-  margin: auto;
-}
-
-footer#files {
-  background-color: var(--background-color);
-}
-
-@media (min-width: 900px) {
-  footer ul::before {
-    left: 2%;
-  }
+  margin-top: 2px;
+  padding-right: 4px;
 }

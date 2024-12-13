@@ -1,95 +1,99 @@
 #about {
-   width: 85%;
-   margin: auto;
+	width: 85%;
+	margin: auto;
+	p {
+		hyphens: auto;
+		margin: auto;
+	}
+	.container {
+		&:first-of-type {
+			h2 {
+				margin: 1.5rem auto 1rem;
+				text-align: center;
+			}
+			p {
+				&:first-of-type {
+					margin-left: auto;
+				}
+			}
+			blockquote {
+				p {
+					&:first-of-type {
+						margin: auto;
+						width: 100%;
+						border-top: 2px solid black;
+						border-bottom: 2px solid black;
+						padding: 8px 0;
+						background-color: $background-color;
+					}
+				}
+			}
+		}
+		&:nth-of-type(2) {
+			h2 {
+				margin-top: 1.5rem;
+			}
+			ul {
+				position: relative;
+				max-width: 500px;
+				min-width: 330px;
+				min-height: 330px;
+				margin: auto;
+				padding-top: 20px;
+				padding-left: 0;
+				z-index: 1;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100vw;
+					min-width: 400px;
+					max-width: 550px;
+					height: 100%;
+					background-image: url('images/jack-o-lantern.png');
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					opacity: 0.2;
+					z-index: -1;
+				}
+			}
+			li {
+				margin: 0.5rem 1rem;
+				box-sizing: border-box;
+				z-index: 2;
+				border: 2px solid black;
+				padding: 0.25rem;
+				// font-weight: bold;
+			}
+			p {
+				&:nth-of-type(3) {
+					margin: 1.25rem auto;
+				}
+				&:nth-of-type(4) {
+					margin: 1.25rem auto;
+				}
+			}
+		}
+		p {
+			margin: 1.5rem auto 0;
+		}
+	}
 }
-
-#about p {
-   hyphens: auto;
-   margin: auto;
+@media (min-width: $large-screen-size) {
+	#about {
+		.container {
+			p {
+				margin: 1.5rem auto;
+			}
+		}
+		h2 {
+			margin-top: 10rem;
+		}
+	}
 }
-
-#about .container:first-of-type h2 {
-   margin: 1.5rem auto 1rem;
-   text-align: center;
-}
-
-#about .container:first-of-type p:first-of-type {
-   margin-left: auto; 
-}
-
-#about .container:first-of-type blockquote p:first-of-type {
-   margin: auto;
-   background-color: white;
-   width: 100%;
-   border-top: 2px solid black;
-   border-bottom: 2px solid black;
-   padding: 8px 0;
-   background-color: var(--background-color);
-}
-
-#about .container:nth-of-type(2) h2 {
-   margin-top: 1.5rem;
-}
-
-#about .container:nth-of-type(2) ul {
-   position: relative;
-   width: 90%;
-   max-width: 500px;
-   min-width: 330px;
-   min-height: 330px;
-   margin: auto;
-   padding-top: 35px;
-   z-index: 1; 
-   display: flex;
-   flex-wrap: wrap;
-}
-
-#about .container:nth-of-type(2) ul::before {
-   content: '';
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%); 
-   width: 90vw; 
-   min-width: 320px;
-   max-width: 550px;
-   height: 100%; 
-   background-image: url(jack-o-lantern.png);
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   opacity: 0.1; 
-   z-index: -1; 
-}
-
-
-#about .container:nth-of-type(2) li {
-   margin: 0 1rem;
-   box-sizing: border-box;
-   z-index: 2;
-}
-#about .container:nth-of-type(2) p:nth-of-type(3), 
-#about .container:nth-of-type(2) p:nth-of-type(4) {
-   margin: 1.25rem auto;
-}
-
-:root {
-   --background-color: #39bc5e;
-   --color-background: #5a388a;
-}
-
-@media (min-width: 900px) {
-   // #about .container {
-   //    margin: 2.5rem auto 2rem;
-   //    width: 70%;
-   // }
-
-   #about .container p {
-      margin: 1.5rem auto;
-   }
-
-   #about h2 {
-      margin-top: 10rem;
-   }
-}
-

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nosifer&display=swap');
 
-:root {
-   --header-font: "Nosifer";
-   --body-font: "Fredoka";
+p, li {
+   font-family: $body-font;
+}
+
+h1, h2, h3, h4 {
+   font-family: $header-font;
 }
